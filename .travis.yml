@@ -5,8 +5,7 @@ before_install:
 #  - gem install bundler --pre
   - sudo apt-get install openssh-server curl
 # This times out because we compile many kinds of rubies
-# TODO: make some rubies optional?
-#  - bash < <(curl -s -k -B https://raw.github.com/cloudfoundry/vcap/master/setup/install)
+  - bash < <(curl -s -k -B https://raw.github.com/cloudfoundry/vcap/master/setup/install)
 before_script: "git submodule update --init --recursive"
 script: "bundle exec rake spec"
 notifications:
@@ -16,8 +15,8 @@ notifications:
 #    - "irc.freenode.org#cloudfoundry"
 #env:
 rvm:
-  - ree
+#  - ree
   - 1.9.2
-  - 1.9.3
-  - rbx
-  - jruby
+#  - 1.9.3
+#  - rbx
+#  - jruby
