@@ -1,0 +1,19 @@
+before_install:
+  - gem update --system
+  - gem install bundler --pre
+  - sudo apt-get install openssh-server curl
+  - bash < <(curl -s -k -B https://raw.github.com/cloudfoundry/vcap/master/setup/install)
+before_script:
+script: "bundle exec rake spec"
+notifications:
+  email:
+    - duke@leto.net
+#  irc:
+#    - "irc.freenode.org#cloudfoundry"
+#env:
+rvm:
+  - ree
+  - 1.9.2
+  - 1.9.3
+  - rbx
+  - jruby
