@@ -1,9 +1,11 @@
+language: ruby
 before_install:
   - gem update --system
+  - gem --version
   - gem install bundler --pre
   - sudo apt-get install openssh-server curl
   - bash < <(curl -s -k -B https://raw.github.com/cloudfoundry/vcap/master/setup/install)
-before_script:
+before_script: "git submodule update --init --recursive"
 script: "bundle exec rake spec"
 notifications:
   email:
