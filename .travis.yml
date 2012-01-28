@@ -7,7 +7,7 @@ before_install:
 # This times out because we compile many kinds of rubies
 #  - bash < <(curl -s -k -B https://raw.github.com/cloudfoundry/vcap/master/setup/install)
 before_script: "git submodule update --init --recursive"
-script: "bundle exec rake spec"
+script: "cd tests; bundle exec rake tests"
 notifications:
   email:
     - duke@leto.net
