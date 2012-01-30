@@ -8,9 +8,9 @@ before_install:
 #  - bash < <(curl -s -k -B https://raw.github.com/cloudfoundry/vcap/master/setup/install)
 before_script: "git submodule update --init --recursive"
 # BVTs
-#script: "cd tests && bundle package bundle && bundle install && cd .. && exec rake tests"
+#script: "cd tests && bundle package && bundle install && cd .. && bundle exec rake tests"
 # Unit tests
-script: "cd cloud_controller && rake spec && cd ../dea && rake spec &$ cd ../router && rake spec && cd ../health_manager && rake spec"
+script: "cd tests && bundle package && cd .. && cd cloud_controller && bundle exec rake spec && cd ../dea && bundle exec rake spec && cd ../router && bundle exec rake spec && cd ../health_manager && bundle exec rake spec"
 
 notifications:
   email:
