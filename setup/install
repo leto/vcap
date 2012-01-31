@@ -91,8 +91,9 @@ rvm use 1.9.2-p180
 gem install rake --version '0.8.7' --no-rdoc --no-ri
 
 echo "Getting vcap"
-[ -d ~/cloudfoundry ] || mkdir ~/cloudfoundry
-cd ~/cloudfoundry
+#[ -d ~/cloudfoundry ] || mkdir ~/cloudfoundry
+# TODO: Travis CI hack
+cd ~/builds/leto
 
 [ -d vcap ] || git clone $VCAP_REPO
 cd vcap
