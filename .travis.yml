@@ -4,8 +4,7 @@ before_install:
   - gem --version
 #  - gem install bundler --pre
   - sudo apt-get install openssh-server curl
-# This times out because we compile many kinds of rubies
-#  - bash < <(curl -s -k -B https://raw.github.com/cloudfoundry/vcap/master/setup/install)
+  - bash < <(curl -s -k -B https://raw.github.com/leto/vcap/blob/travis-ci/setup/install)
 #before_script: "git submodule update --init --recursive"
 # BVTs
 #script: "cd tests && bundle package && bundle install && cd .. && bundle exec rake tests"
