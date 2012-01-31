@@ -60,9 +60,10 @@ if [ -f ~/.bashrc ]; then
 fi
 
 echo "Installing rvm"
-curl -s -k -B https://rvm.beginrescueend.com/install/rvm > /tmp/install_rvm
-bash /tmp/install_rvm
-rm /tmp/install_rvm
+# Travis already has rvm
+#curl -s -k -B https://rvm.beginrescueend.com/install/rvm > /tmp/install_rvm
+#bash /tmp/install_rvm
+#rm /tmp/install_rvm
 
 echo "Activate rvm"
 if [ "$(id -u)" != "0" ]; then
