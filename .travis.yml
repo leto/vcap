@@ -10,7 +10,7 @@ before_install:
 # BVTs
 #script: "cd tests && bundle package && bundle install && cd .. && bundle exec rake tests"
 # Unit tests
-script: "git submodule update --init --recursive && cd tests && bundle package && bundle install && cd .. && cd cloud_controller && bundle exec rake spec ; cd ../dea && bundle exec rake spec ; cd ../router && bundle exec rake spec ; cd ../health_manager && bundle exec rake spec"
+script: "cd tests && bundle package && bundle install && cd .. && cd cloud_controller && bundle exec rake spec ; cd ../dea && bundle exec rake spec ; cd ../router && bundle exec rake spec ; cd ../health_manager && bundle exec rake spec"
 
 notifications:
   email:

@@ -79,8 +79,9 @@ rm $rvm_path/gemsets/default.gems
 rm $rvm_path/gemsets/global.gems
 
 echo "Installing various rubies"
-rvm install 1.9.2-p180
-rvm --default 1.9.2-p180
+echo "Travis should have our ruby version"
+#rvm install 1.9.2-p180
+#rvm --default 1.9.2-p180
 
 # Horrible hack to slide in under the Travis CI timeouts. Do not try at home!
 #rvm install 1.8.7-p352
